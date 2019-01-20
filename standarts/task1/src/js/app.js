@@ -1,4 +1,4 @@
-function getBonus(values) {
+let bonus = (values) => {
     let sum = 0;
     const limit = 10000;
     const percent = 5;
@@ -10,8 +10,8 @@ function getBonus(values) {
        return 0;
     }
 
-    const bonus = sum / 100 * percent; 
+    const bonus = (sum - limit) / 100 * percent; 
     return Math.trunc(bonus);
 }
 
-console.log(getBonus([200, 550, 4000, 23, 58, 5000, 485, 711]));
+console.log(bonus([200, 550, 4000, 23, 58, 5000, 485, 711]));
